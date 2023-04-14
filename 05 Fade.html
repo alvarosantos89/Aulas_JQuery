@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Fade</title>
+    
+        <!--JQuery-->
+        <script src="jquery-3.6.4.min.js"></script>
+
+        <script>
+            //Ao carregar o documento
+            $(document).ready(function()
+            {
+                //Ocultar h1 ao carregar
+                $("h1").css("display", "none");
+
+                //Exibir h1
+                $("#exibir").click(function(){
+                    $("h1").fadeIn();
+                })
+
+                //Ocultar h1 no click
+                $("#ocultar").click(function(){
+                    $("h1").fadeOut();
+                })
+
+                /*
+                TEMPO:
+                1- Default: 0,4segundos
+                2- Slow: 0,6segundos
+                3- Valor: trabalha em milissegundos (3000 = 3s)
+                */
+            });
+        </script>
+
+    </head>
+    <body>
+        <button id="exibir">Exibir</button>
+        <button id="ocultar">Ocultar</button>
+        <hr>
+        <h1>Aprendendo JQuery</h1>
+
+    </body>
+</html>
